@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <header>
+    <ul>
+      <li>Rock</li>
+      <li>Paper</li>
+      <li>Scissors</li>
+      <li>Lizard</li>
+      <li>Spock</li>
+    </ul>
+    <div class="score">
+      <p>Score</p>
+      <div id="score">12</div>
+    </div>
+  </header>
+
+  <main>
+    <object id="pentagon" data="images/bg-pentagon.svg" type="image/svg+xml"></object>
+    <button class="chooseOption" id="scissors" onclick="chooseItem(scissors)">
+      <svg data="images/icon-scissors.svg"></svg>
+    </button>
+    <button class="chooseOption" id="paper">
+      <object data="images/icon-paper.svg" type="image/svg+xml"></object>
+    </button>
+    <button class="chooseOption" id="rock">
+      <object data="images/icon-rock.svg" type="image/svg+xml"></object>
+    </button>
+    <button class="chooseOption" id="lizard">
+      <object data="images/icon-lizard.svg" type="image/svg+xml"></object>
+    </button>
+    <button class="chooseOption" id="spock">
+      <object data="images/icon-spock.svg" type="image/svg+xml"></object>
+    </button>
+
+    <div class="youPicked">You picked</div>
+    <div class="housePicked">The house picked</div>
+
+    
+  </main>
+  <div>
+
+    <button id="rules">Rules</button>
+  </div>
+
+  <div class="textBaustein" style="display: none;">
+    Score
+    Rules
+
+    You Picked
+    The House Picked
+
+    You Win
+    You Lose
+
+    Play Again
+  </div>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Julia</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <style>
+            * {font-family: sans-serif;}
+        
+        
+        </style>
+        
+            
+        
+    </head>
+    
+    <body>
+        <h1>Schere Stein Papier Echse Spock</h1>
+        
+        <quote>Spiel' gegen den Computer!</quote>
+        
+        <h2>Willst du spielen?</h2>
+        
+        <button 
+                type="button1" 
+                onclick="this.style.visibility= 'hidden'; document.getElementById('ausgabe1').style.display='block';">
+                Ja
+        </button>
+        
+        <div id="ausgabe1" style="display:none">
+            
+            <div id="ausgabe2" style="display:block">
+                <p id="text1" style="display:block">
+                    Zuerst wählt der PC per Zufall ein Symbol aus.
+                </p>
+                <button id="button2" onclick="this.style.visibility='hidden';pcWahl()">Ok und jetzt du!</button>
+            </div>
+                
+            <div id="ausgabe3" style="display:none">
+                <p>Wähle ein Symbol:</p>
+                <form>
+                    
+                    <p>Gib deine Wahl ein: 1 = Schere, 2 = Stein, 3 = Papier, 4 = Echse, 5 = Spock</p>
+                    <input type="number" name="userWahl" id="userWahl">
+                    <button 
+                            id="button3" 
+                            type="button" 
+                            onclick="funUserWahl()">
+                        Absenden
+                    </button>
+                    
+                </form> 
+            </div>
+            
+            <div id="ausgabe4" style="display:none">            
+                <button id="button4" type="button" onclick="vergleich()">Willst du wissen wer gewonnen hat?</button>
+                
+            </div>
+            
+            <div id="resultat" style="display:none">
+                <p id="textresultat">Ergebnis</p>
+            </div>
+            
+                    
+        </div> <!-- ausgabe1 -->
+        
+        
+            
+    
+       <script type="text/javascript">
+    
+            //PC Wahl Symbol per Zufall + Hiding/Visibility
+            function pcWahl() {
+                
+                 var symbolPC;
+                var symbolUser;
+                var anzahlRunden = 0;
+                var siegePC = 0;
+                var siegeUser = 0;
+                var gewinnBedingung = 3;
+
+                
+                var randomZahl = Math.random() * 5; 
+                randomZahl = Math.round(randomZahl + 0.5)
+
+                if (randomZahl == 1) {symbolPC = "Schere"}
+                if (randomZahl == 2) {symbolPC = "Stein"}
+                if (randomZahl == 3) {symbolPC = "Papier"}
+                if (randomZahl == 4) {symbolPC = "Echse"}
+                if (randomZahl == 5) {symbolPC = "Spock"}
+
+                document.getElementById('ausgabe3').style.display='block';
+
+                document.getElementById('text1').style.display='none';
+
+            }
+
+           // User Wahl mittels Eingabe
+            function funUserWahl() {
+                document.getElementById('ausgabe4').style.display='block';
+                
+                var userWahl = document.getElementById('userWahl').value; 
+                
+               
+                // User wählt
+                if (userWahl == 1) {symbolUser = "Schere"}
+                if (userWahl == 2) {symbolUser = "Stein"}
+                if (userWahl == 3) {symbolUser = "Papier"}
+                if (userWahl == 4) {symbolUser = "Echse"}
+                if (userWahl == 5) {symbolUser = "Spock"}
+                
+                document.getElementById('ausgabe3').style.display='none';
+            }
+           
+            // Vergleich
+           function vergleich() {
+                document.getElementById('resultat').style.display='block';
+               
+               //Vergleich wer Runde gewinnt 
+                if(symbolPC === symbolUser ) { 
+                    document.getElementById("textresultat").innerHTML = "Unentschieden"; 
+                }
+                
+                if (symbolPC == "Schere" && symbolUser == "Stein"){
+                    document.getElementById("textresultat").innerHTML = "Stein schleift Schere - du gewinnst";
+                }
+                if (symbolPC == "Schere" && symbolUser == "Papier"){
+                    document.getElementById("textresultat").innerHTML = "Schere schneidet Papier - PC gewinnt.";
+                }
+                if (symbolPC == "Schere" && symbolUser == "Echse"){
+                    document.getElementById("textresultat").innerHTML = "Schere köpft Echse - PC gewinnt.";
+                }
+                if (symbolPC == "Schere" && symbolUser == "Spock"){
+                    document.getElementById("textresultat").innerHTML = "Spock zertrümmert Schere - du gewinnst";
+                }
+                if (symbolPC == "Stein" && symbolUser == "Schere"){
+                    document.getElementById("textresultat").innerHTML = "Stein schleift Schere - PC gewinnt";
+                }
+                if (symbolPC == "Stein" && symbolUser == "Papier"){
+                    document.getElementById("textresultat").innerHTML = "Papier bedeckt Stein - du gewinnst";
+                }
+                if (symbolPC == "Stein" && symbolUser == "Echse"){
+                    document.getElementById("textresultat").innerHTML = "Stein zerquetscht Echse - PC gewinnt";
+                } 
+                if (symbolPC == "Stein" && symbolUser == "Spock"){
+                    document.getElementById("textresultat").innerHTML = "Spock verdampft Stein - du gewinnst";
+                }
+                if (symbolPC == "Papier" && symbolUser == "Schere"){
+                    document.getElementById("textresultat").innerHTML = "Schere schneidet Papier - du gewinnst";
+                }
+                if (symbolPC == "Papier" && symbolUser == "Stein"){
+                    document.getElementById("textresultat").innerHTML = "Papier bedeckt Stein - PC gewinnt";
+                }
+                if (symbolPC == "Papier" && symbolUser == "Echse"){
+                    document.getElementById("textresultat").innerHTML = "Echse frisst Papier - du gewinnst";
+                }
+                if (symbolPC == "Papier" && symbolUser == "Spock"){
+                    document.getElementById("textresultat").innerHTML = "Papier widerlegt Spock - PC gewinnt";
+                }
+                if (symbolPC == "Echse" && symbolUser == "Schere"){
+                    document.getElementById("textresultat").innerHTML = "Schere köpft Echse - du gewinnst";
+                }
+                if (symbolPC == "Echse" && symbolUser == "Stein"){
+                    document.getElementById("textresultat").innerHTML = "Stein zerquetscht Echse - du gewinnst";
+                }
+                if (symbolPC == "Echse" && symbolUser == "Papier"){
+                    document.getElementById("textresultat").innerHTML = "Echse frisst Papier - PC gewinnt";
+                }
+                if (symbolPC == "Echse" && symbolUser == "Spock"){
+                    document.getElementById("textresultat").innerHTML = "Echse vergiftet Spock - PC gewinnt";
+                }
+                if (symbolPC == "Spock" && symbolUser == "Schere"){
+                    document.getElementById("textresultat").innerHTML = "Spock zertrümmert Schere - PC";
+                }
+                if (symbolPC == "Spock" && symbolUser == "Stein"){
+                    document.getElementById("textresultat").innerHTML = "Spock verdampft Stein - PC";
+                }
+                if (symbolPC == "Spock" && symbolUser == "Papier"){
+                    document.getElementById("textresultat").innerHTML = "Papier widerlegt Spock - du gewinnst";
+                }
+                if (symbolPC == "Spock" && symbolUser == "Echse"){
+                    document.getElementById("textresultat").innerHTML = "Echse vergiftet Spock - du gewinnst"; 
+                }
+               
+           }
+           
+           
+        </script>
+        
+     
+                
+    </body>
+</html>
