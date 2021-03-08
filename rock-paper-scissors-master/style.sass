@@ -29,17 +29,21 @@ header
 //     flex-direction: column
 //     justify-content: flex-start
 
+button
+    color: black
+
+
 button:hover
     cursor: pointer
 
 button[class*="chooseOption"]
     border: none
+    color: black
     // border-radius: 50%
     
-// button[class*="chooseOption"]#scissors
-//     border: 7px solid $gradientScissors
+button[class*="chooseOption"]#scissors
+    border: 7px solid $gradientScissors
     
-
 button[class*="chooseOption"]#paper
     border: 7px solid $gradientPaper
 
@@ -52,3 +56,12 @@ button[class*="chooseOption"]#lizard
 button[class*="chooseOption"]#spock
     border: 7px solid $gradientSpock
 
+.chosenInactive
+    display: none
+    color: red
+
+#playagain
+    display: none
+
+#housePicked
+    margin-bottom: 50px

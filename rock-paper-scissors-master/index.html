@@ -28,25 +28,32 @@
   </header>
 
   <main>
-    <object id="pentagon" data="images/bg-pentagon.svg" type="image/svg+xml"></object>
-    <button class="chooseOption" id="scissors" onclick="chooseItem(scissors)">
-      <svg data="images/icon-scissors.svg"></svg>
+    <h2 class="youPicked">You picked</h2>
+
+    <!-- <object id="pentagon" data="images/bg-pentagon.svg" type="image/svg+xml"></object> -->
+    <button class="chooseOption" id="scissors">Scissors
+      <!-- <svg data="images/icon-scissors.svg"></svg> -->
     </button>
-    <button class="chooseOption" id="paper">
-      <object data="images/icon-paper.svg" type="image/svg+xml"></object>
+    <button class="chooseOption" id="paper">Paper
+      <!-- <object data="images/icon-paper.svg" type="image/svg+xml"></object> -->
     </button>
-    <button class="chooseOption" id="rock">
-      <object data="images/icon-rock.svg" type="image/svg+xml"></object>
+    <button class="chooseOption" id="rock">Rock
+      <!-- <object data="images/icon-rock.svg" type="image/svg+xml"></object> -->
     </button>
-    <button class="chooseOption" id="lizard">
-      <object data="images/icon-lizard.svg" type="image/svg+xml"></object>
+    <button class="chooseOption" id="lizard">Lizard
+      <!-- <object data="images/icon-lizard.svg" type="image/svg+xml"></object> -->
     </button>
-    <button class="chooseOption" id="spock">
-      <object data="images/icon-spock.svg" type="image/svg+xml"></object>
+    <button class="chooseOption" id="spock">Spock
+      <!-- <object data="images/icon-spock.svg" type="image/svg+xml"></object> -->
     </button>
 
-    <div class="youPicked">You picked</div>
-    <div class="housePicked">The house picked</div>
+    <div id="youPicked"></div>
+
+    <div id="result"></div>
+    <button id="playagain">Play Again</button>
+
+    <h2 class="housePicked">The house picked</h2>
+    <div id="housePicked"></div>
 
     
   </main>

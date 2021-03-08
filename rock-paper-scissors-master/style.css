@@ -31,12 +31,21 @@ header ul {
   list-style: none;
 }
 
+button {
+  color: black;
+}
+
 button:hover {
   cursor: pointer;
 }
 
 button[class*="chooseOption"] {
   border: none;
+  color: black;
+}
+
+button[class*="chooseOption"]#scissors {
+  border: 7px solid #ec9e0e;
 }
 
 button[class*="chooseOption"]#paper {
@@ -53,5 +62,18 @@ button[class*="chooseOption"]#lizard {
 
 button[class*="chooseOption"]#spock {
   border: 7px solid #40b9ce;
+}
+
+.chosenInactive {
+  display: none;
+  color: red;
+}
+
+#playagain {
+  display: none;
+}
+
+#housePicked {
+  margin-bottom: 50px;
 }
 /*# sourceMappingURL=style.css.map */
