@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 
 </head>
+
 <body>
 
   <header>
@@ -28,58 +31,64 @@
   </header>
 
   <main>
-    <h2 class="youPicked">You picked</h2>
 
-    <!-- <object id="pentagon" data="images/bg-pentagon.svg" type="image/svg+xml"></object> -->
-    <button class="chooseOption" id="scissors">Scissors
-      <!-- <svg data="images/icon-scissors.svg"></svg> -->
-    </button>
-    <button class="chooseOption" id="paper">Paper
-      <!-- <object data="images/icon-paper.svg" type="image/svg+xml"></object> -->
-    </button>
-    <button class="chooseOption" id="rock">Rock
-      <!-- <object data="images/icon-rock.svg" type="image/svg+xml"></object> -->
-    </button>
-    <button class="chooseOption" id="lizard">Lizard
-      <!-- <object data="images/icon-lizard.svg" type="image/svg+xml"></object> -->
-    </button>
-    <button class="chooseOption" id="spock">Spock
-      <!-- <object data="images/icon-spock.svg" type="image/svg+xml"></object> -->
-    </button>
+    <div id="startBtns">
 
-    <div id="youPicked"></div>
+      <!-- <object id="pentagon" data="images/bg-pentagon.svg" type="image/svg+xml"></object> -->
+      <div class="startBtnsRow">
+        <button class="chooseOption" id="scissors">
+          <img src="images/icon-scissors.svg"></img>
+        </button>
+      </div>
+      <div class="startBtnsRow">
+        <button class="chooseOption" id="spock">
+          <img src="images/icon-spock.svg"></img>
+        </button>
 
-    <div id="result"></div>
-    <button id="playagain">Play Again</button>
+        <button class="chooseOption" id="paper">
+          <img src="images/icon-paper.svg"></img>
+        </button>
+      </div>
+      <div class="startBtnsRow">
+        <button class="chooseOption" id="lizard">
+          <img src="images/icon-lizard.svg"></img>
+        </button>
+        <button class="chooseOption" id="rock">
+          <img src="images/icon-rock.svg"></img>
+        </button>
+      </div>
 
-    <h2 class="housePicked">The house picked</h2>
-    <div id="housePicked"></div>
+    </div>
 
-    
+    <div id="game">
+
+      <div id="youPicked"></div>
+      <div id="housePicked"></div>
+      <h2 id="youPickedText">You picked</h2>
+      <h2 id="housePickedText">The house picked</h2>
+
+      <div>
+
+        <div id="result"></div>
+        <button id="playagain">Play Again</button>
+      </div>
+
+
+    </div>
+
   </main>
-  <div>
-
-    <button id="rules">Rules</button>
+  <div id="rulesSection">
+    <button>Rules</button>
   </div>
 
-  <div class="textBaustein" style="display: none;">
-    Score
-    Rules
 
-    You Picked
-    The House Picked
-
-    You Win
-    You Lose
-
-    Play Again
-  </div>
-  
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Julia</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.demel.codes" target="_blank">Julia</a>.
   </footer>
 
+  <!-- ! Script -->
   <script src="script.js"></script>
 </body>
+
 </html>
